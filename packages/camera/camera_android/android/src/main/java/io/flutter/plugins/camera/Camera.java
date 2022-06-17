@@ -355,7 +355,7 @@ class Camera
           public void onError(@NonNull CameraDevice cameraDevice, int errorCode) {
             Log.i(TAG, "open | onError");
 
-            close();
+            closeError();
             String errorDescription;
             switch (errorCode) {
               case ERROR_CAMERA_IN_USE:
@@ -1194,6 +1194,29 @@ class Camera
     }
 
     stopBackgroundThread();
+  }
+          
+  public void closeError() {
+    Log.i(TAG, "close");
+    closeCaptureSession();
+
+    if (cameraDevice != null) {
+      cameraDevice.close();
+      cameraDevice = null;
+    }
+    if (pictureImageReader != null) {
+      pictureImageReader.close();
+      pictureImageReader = null;
+    }
+    if (imageStreamReader != null) {
+      imageStreamReader.close();
+      imageStreamReader = null;
+    }
+    if (mediaRecorder != null) {
+      mediaRecorder.reset();
+      mediaRecorder.release();
+      mediaRecorder = null;
+    }
   }
 
   public void dispose() {
