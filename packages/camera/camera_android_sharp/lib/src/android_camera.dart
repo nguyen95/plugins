@@ -22,7 +22,7 @@ class AndroidCamera extends CameraPlatform {
   /// Construct a new method channel camera instance.
   AndroidCamera() {
     const MethodChannel channel =
-        MethodChannel('plugins.flutter.io/camera_android/fromPlatform');
+        MethodChannel('plugins.flutter.io/camera_android_sharp/fromPlatform');
     channel.setMethodCallHandler(
         (MethodCall call) => handleDeviceMethodCall(call));
   }
@@ -117,8 +117,8 @@ class AndroidCamera extends CameraPlatform {
     ImageFormatGroup imageFormatGroup = ImageFormatGroup.unknown,
   }) {
     _channels.putIfAbsent(cameraId, () {
-      final MethodChannel channel =
-          MethodChannel('plugins.flutter.io/camera_android/camera$cameraId');
+      final MethodChannel channel = MethodChannel(
+          'plugins.flutter.io/camera_android_sharp/camera$cameraId');
       channel.setMethodCallHandler(
           (MethodCall call) => handleCameraMethodCall(call, cameraId));
       return channel;
@@ -300,7 +300,7 @@ class AndroidCamera extends CameraPlatform {
   Future<void> _startPlatformStream() async {
     await _channel.invokeMethod<void>('startImageStream');
     const EventChannel cameraEventChannel =
-        EventChannel('plugins.flutter.io/camera_android/imageStream');
+        EventChannel('plugins.flutter.io/camera_android_sharp/imageStream');
     _platformImageStreamSubscription =
         cameraEventChannel.receiveBroadcastStream().listen((dynamic imageData) {
       _frameStreamController!

@@ -51,7 +51,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
 
     methodChannel = new MethodChannel(messenger, "plugins.flutter.io/camera_android");
     imageStreamChannel =
-        new EventChannel(messenger, "plugins.flutter.io/camera_android/imageStream");
+        new EventChannel(messenger, "plugins.flutter.io/camera_android_sharp/imageStream");
     methodChannel.setMethodCallHandler(this);
   }
 

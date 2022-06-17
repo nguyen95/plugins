@@ -6,7 +6,7 @@
 // ignore: unnecessary_import
 import 'dart:typed_data';
 
-import 'package:camera_android/src/type_conversion.dart';
+import 'package:camera_android_sharp/src/type_conversion.dart';
 import 'package:camera_platform_interface/camera_platform_interface.dart';
 import 'package:flutter_test/flutter_test.dart';
 

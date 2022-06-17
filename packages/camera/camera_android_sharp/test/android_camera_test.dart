@@ -6,8 +6,8 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:async/async.dart';
-import 'package:camera_android/src/android_camera.dart';
-import 'package:camera_android/src/utils.dart';
+import 'package:camera_android_sharp/src/android_camera.dart';
+import 'package:camera_android_sharp/src/utils.dart';
 import 'package:camera_platform_interface/camera_platform_interface.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';

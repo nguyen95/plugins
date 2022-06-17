@@ -26,7 +26,7 @@ packages/webview_flutter/**                              @bparrishMines
 packages/**/*_web/**                                     @ditman
 
 # - Android
-packages/camera/camera_android/**                        @camsim99
+packages/camera/camera_android_sharp/**                        @camsim99
 packages/espresso/**                                     @blasten
 packages/flutter_plugin_android_lifecycle/**             @blasten
 packages/google_maps_flutter/google_maps_flutter/android/**  @GaryQian
