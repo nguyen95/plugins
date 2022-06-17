@@ -1,4 +1,4 @@
-name: camera_hahahah
+name: camera
 description: A Flutter plugin for controlling the camera. Supports previewing
   the camera feed, capturing images and video, and streaming image buffers to
   Dart.
@@ -14,7 +14,7 @@ flutter:
   plugin:
     platforms:
       android:
-        default_package: camera_android
+        default_package: camera_android_sharp
       ios:
         default_package: camera_avfoundation
       web:
