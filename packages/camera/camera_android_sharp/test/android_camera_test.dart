@@ -15,7 +15,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'method_channel_mock.dart';
 
-const String _channelName = 'plugins.flutter.io/camera_android';
+const String _channelName = 'plugins.flutter.io/camera_android_sharp';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

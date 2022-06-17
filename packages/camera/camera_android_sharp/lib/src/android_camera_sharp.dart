@@ -15,7 +15,7 @@ import 'type_conversion.dart';
 import 'utils.dart';
 
 const MethodChannel _channel =
-    MethodChannel('plugins.flutter.io/camera_android');
+    MethodChannel('plugins.flutter.io/camera_android_sharp');
 
 /// The Android implementation of [CameraPlatform] that uses method channels.
 class AndroidCamera extends CameraPlatform {
